@@ -1,0 +1,164 @@
+.App {
+  background: #E7E1B8;
+  margin: 50px auto;
+  width: 500px;
+  font-size: 20px;
+  font-family: Consolas;
+  user-select: none;
+  border: 3px solid rgba(242, 236, 198, 0.85);
+  border-radius: 5px;
+  box-shadow: 0 0 5px #F7F7F7;
+  text-align: center;
+}
+
+.play-board {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: 0 0 5px #282C34;
+}
+.row {
+  height: 100px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 2px solid #282C34;
+}
+
+.green {
+  background: #6EE099;
+}
+.red {
+  background: #E47869;
+}
+.yellow {
+  background: rgba(251, 251, 111, 0.89);
+}
+.blue {
+  background: #8888F3;
+}
+
+.circle {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 25%;
+  top: 25%;
+  border: 2px solid #3d3434;
+  border-radius: 50%;
+  background: #FFF;
+  box-shadow: 0 0 5px #313030;
+}
+
+p.score {
+  color: red;
+  font-size: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.control-board {
+   margin: 30px auto;
+   width: 350px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+.control-board>div {
+  flex: 1;
+}
+.check-btn {
+   margin: 20px 0;
+   text-align: right;
+}
+.check-btn span {
+  padding: 0 5px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {          
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+button.start{
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: #848ef0;
+  width: 70px;
+  height: 70px;
+  box-shadow: 0 0 5px #000;
+}
+
+button.start:focus {
+  outline: none;
+
+}
+
+button.start:active {
+  background: #ACB3F1;
+  box-shadow: 0 0 2px #6F6D6D;
+}

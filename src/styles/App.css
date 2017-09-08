@@ -32,14 +32,26 @@
 .green {
   background: #6EE099;
 }
+.green.lighten {
+  background: #A8FFC8
+}
 .red {
   background: #E47869;
 }
+.red.lighten {
+  background: #F89385;
+}
 .yellow {
-  background: rgba(251, 251, 111, 0.89);
+  background: #D3D369;
+}
+.yellow.lighten {
+  background: #E9E97E;
 }
 .blue {
   background: #8888F3;
+}
+.blue.lighten {
+  background: #A7A7FF;
 }
 
 .circle {

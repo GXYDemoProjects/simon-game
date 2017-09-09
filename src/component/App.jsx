@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import GithubCorner from 'react-github-corner';
 import '../styles/App.css';
 
 function SwitchBtn(props) {
@@ -260,6 +261,11 @@ class App extends Component {
 
     return (
       <div className="App">
+        <GithubCorner 
+          href="https://github.com/GuoXiaoyang/Simon-Game"
+          bannerColor="#EF4F4F"
+          octoColor="#272727"
+        />
         <h2>Simon Game</h2>
         <div className="play-board">
           <div className="row">

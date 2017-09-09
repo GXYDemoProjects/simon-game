@@ -1,7 +1,7 @@
 .App {
   background: #E7E1B8;
   margin: 50px auto;
-  width: 400px;
+  max-width: 500px;
   font-size: 20px;
   font-family: Consolas;
   user-select: none;
@@ -85,8 +85,11 @@ p.score {
    align-items: center;
    justify-content: center;
 }
-.control-board>div {
-  flex: 1;
+.control-board .btn-left {
+  flex: 4;
+}
+.control-board .btn-right {
+  flex: 3;
 }
 .check-btn {
    margin: 20px 0;

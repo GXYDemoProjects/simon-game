@@ -139,6 +139,8 @@ class App extends Component {
         return;
       }
       event.preventDefault();
+      event.target.classList.add('lighten');
+      // console.log(event.target.classList);
       // clear waitTimerId
       if (this.waitTimerId) {
         clearTimeout(this.waitTimerId);
@@ -146,7 +148,7 @@ class App extends Component {
       // sigle step right
       const needStep = this.gameSteps[this.singleStep];
       const needType = this.type[needStep];
-      if (type === needType) {
+      if (type === needType) { 
         this.currentAudio = this.initialAudio(type);
         // if it's middle step if it's final single step if it's final game step
       } else {
@@ -155,13 +157,14 @@ class App extends Component {
         this.setState({score: 'Error'});
       }
       if (this.currentAudio) {
-        this.currentAudio.play();
+        this.currentAudio.play().catch(err => console.log('Play Error:', err));;
       }
-      event.target.classList.add('lighten');
+      
     };
   }
   handleMouseUp(type) {
     return (event) => {
+      // console.log(event.target.classList);
       if (!this.power || !this.start || this.disableClick) {
         return;
       }
@@ -218,12 +221,10 @@ class App extends Component {
     if(!this.power) {
       this.resetGame();
     }
-    console.log('this.power:',this.power);
   }
 
   toggleStrict() {
     this.strict = !this.strict;
-    console.log('this.strict:',this.strict);
   }
 
   resetGame() {
@@ -301,8 +302,8 @@ class App extends Component {
             <SwitchBtn type='power' onClick={() => this.togglePower()}/>
             <SwitchBtn type='strict' onClick={() => this.toggleStrict()}/>
           </div>
-          <div>
-            <button className="btn-right start" onClick={() => this.startGame()}>Start</button>
+          <div className="btn-right">
+            <button className="start" onClick={() => this.startGame()}>Start</button>
           </div>
         </div>
       </div>
